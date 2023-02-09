@@ -1,25 +1,37 @@
-# E-Learning sph-els-francis-delos-santos
-Deployed app: https://luminous-capybara-da47ad.netlify.app
+# E-Learning sph-els-francis-santos
+
 ### Tech Stack
 - React - https://reactjs.org/
-- Tailwind CSS - https://tailwindcss.com/
-- Ant Design - https://ant.design/
-- Express - https://expressjs.com/
-- Sequelize - https://sequelize.org/
-- Jest - https://jestjs.io/
+-Laravel- https://laravel.com/
 ### Setup
-1. Create .env file for backend and .env.local file for frontend
-2. Fill out the necessary information inside .env and .env.local files based on the templates
-3. Run npm install on both backend and frontend
-4. Generate migration on backend
+## FE
+1. cd fe
+2. npm install 
+3. npm start
+
+## BE
+1. cd be
+2. `composer install`
+3. `cp .env.example .env`
+4. `php artisan key:generate`
+5. Change the following database connection
 ```
-sequelize db:migrate
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=
 ```
-5. Run the seeder on backend
-```
-sequelize db:seed:all
-```
+6. `php artisan migrate`
+7. Allow permission `sudo chmod 777 -R storage`
+8. `php artisan serve`
+
+## Run Linters
+FE - `./node_modules/.bin/eslint src --ext .jsx,.js`
+BE - `./vendor/bin/phpcs --colors --report=full --exclude=PSR1.Methods.CamelCapsMethodName --standard=PSR2 ./app ./config ./database ./routes ./tests`
 ### Documentation
 - ERD - https://app.diagrams.net/#G1akUyus1WWK-BAVuFIXK4-7JxJP7LDtOU
 - Postman APIs - 
-- Asana - 
+- Asana - https://app.asana.com/0/1203925446544765/overview
+- WBS - https://docs.google.com/spreadsheets/d/1GWUBNrtTLP-EdSu3S-ECD-7__q2UVp97VEzil4rKz8A/edit#gid=0
