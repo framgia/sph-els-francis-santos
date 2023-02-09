@@ -5,12 +5,12 @@
 -Laravel- https://laravel.com/
 ### Setup
 ## FE
-1. cd fe
-2. npm install 
-3. npm start
+1. `cd fe`
+2. `npm install` 
+3. `npm start`
 
 ## BE
-1. cd be
+1. `cd be`
 2. `composer install`
 3. `cp .env.example .env`
 4. `php artisan key:generate`
