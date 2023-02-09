@@ -1,7 +1,7 @@
 # E-Learning sph-els-francis-santos
 
 ### Tech Stack
-- React - https://reactjs.org/
+-React- https://reactjs.org/ \
 -Laravel- https://laravel.com/
 ### Setup
 ## FE
@@ -28,7 +28,7 @@ DB_PASSWORD=
 8. `php artisan serve`
 
 ## Run Linters
-FE - `./node_modules/.bin/eslint src --ext .jsx,.js`
+FE - `./node_modules/.bin/eslint src --ext .jsx,.js` \
 BE - `./vendor/bin/phpcs --colors --report=full --exclude=PSR1.Methods.CamelCapsMethodName --standard=PSR2 ./app ./config ./database ./routes ./tests`
 ### Documentation
 - ERD - https://app.diagrams.net/#G1akUyus1WWK-BAVuFIXK4-7JxJP7LDtOU
