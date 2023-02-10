@@ -1,11 +1,18 @@
 ## Issue Link
-_will update soon..._
+
 
 ## Defintion of Done
 _will update soon..._
 
 ## Steps to reproduce
-_will update soon..._
+### frontend\
+cd fe\
+npm install\
+npm start\
+
+
+backend
+
 
 ## Affected Components / Functionalities / Page
 n/a
@@ -17,4 +24,6 @@ _will update soon..._
 n/a
 
 ## Screenshots
-n/a
+image.png
+image.png
+
