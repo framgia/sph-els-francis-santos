@@ -9,12 +9,14 @@ const Modal = ({
       document.body.classList.remove('overflow--hidden');
     }
   };
+
   useEffect(() => {
     document.body.classList.add('overflow-hidden');
     return () => {
       document.body.classList.remove('overflow--hidden');
     };
   }, []);
+
   return ReactDOM.createPortal(
     <div>
       <div
