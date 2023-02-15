@@ -12,6 +12,7 @@ trait HttpResponses
             'data' => $data
         ], $code);
     }
+    
     protected function error($data, $code, $message = null)
     {
         return response() -> json([
