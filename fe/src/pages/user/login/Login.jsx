@@ -26,11 +26,9 @@ const Login = () => {
       .post('http://127.0.0.1:8000/api/login', {
         ...formData,
       })
-
       .then(() => {
         navigate('/');
       })
-
       .catch((error) => {
         setErrorMessage(error.response.data.message);
       });
@@ -58,7 +56,7 @@ const Login = () => {
               value={formData.password}
               onChange={handleChange}
             />
-            {errorMessage && <div style={{ color: 'red' }}>{errorMessage}</div>}
+            {errorMessage && <div className="text-red-600">{errorMessage}</div>}
           </div>
           <div className="w-3/4 mt-4">
             <button className="py-4 bg-blue-400 w-full rounded text-blue-50 front-bold hover:bg-blue-700" type="submit">Login</button>
