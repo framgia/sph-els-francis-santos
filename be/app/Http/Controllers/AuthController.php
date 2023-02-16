@@ -9,7 +9,6 @@ use App\Models\User;
 use App\Traits\HttpResponses;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
@@ -49,9 +48,8 @@ class AuthController extends Controller
 
     public function logout()
     {
-        Session::flush();
-
-        Auth::logout();
+        session()->flush();
+        auth()->logout();
 
         return $this->success([
             '', 'LogoutSuccessful', 200
