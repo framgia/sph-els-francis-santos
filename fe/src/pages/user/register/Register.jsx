@@ -52,8 +52,8 @@ const Register = () => {
               value={formData.confirmPassword}
               onChange={handleChange}
             />
-            {errorPassword && <div style={{ color: 'red' }}>{errorPassword}</div>}
-            {validation && <div style={{ color: 'red' }}>{validation}</div>}
+            {errorPassword && <div className="text-red-600">{errorPassword}</div>}
+            {validation && <div className="text-red-600">{validation}</div>}
 
           </div>
           <div className="w-3/4 mt-4">

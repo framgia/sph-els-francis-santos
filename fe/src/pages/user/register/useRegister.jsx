@@ -33,7 +33,6 @@ const useRegister = () => {
           ...formData,
         })
         .then(() => {
-          /* window.location.pathname = '/'; */
           navigate('/');
         })
         .catch((error) => {
