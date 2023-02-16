@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Traits\HttpResponses;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
@@ -43,6 +44,17 @@ class AuthController extends Controller
         return $this->success([
             'user' => $user,
             'token' => $user->createToken('API Token of' . $user->name)->plainTextToken
+        ]);
+    }
+
+    public function logout()
+    {
+        Session::flush();
+
+        Auth::logout();
+
+        return $this->success([
+            '', 'LogoutSuccessful', 200
         ]);
     }
 }
