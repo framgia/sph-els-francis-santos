@@ -51,6 +51,7 @@ const Login = () => {
           <div className="w-3/4 mb-6">
             <input
               className="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 outline-blue-500"
+              type="password"
               placeholder="password"
               name="password"
               value={formData.password}

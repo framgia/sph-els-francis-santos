@@ -1,9 +1,8 @@
 import React from 'react';
+import Header from '../../../components/Header';
 
 const DashboardPage = () => (
-  <div>
-    Home
-  </div>
+  <Header />
 );
 
 export default DashboardPage;
