@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+
+import api from '../../../apis/api';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -22,8 +23,8 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    axios
-      .post('http://127.0.0.1:8000/api/login', {
+    api
+      .post('/login', {
         ...formData,
       })
       .then(() => {

@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+
+import api from '../apis/api';
 
 const Lesson = () => {
-  const baseURL = 'http://127.0.0.1:8000/api/lesson';
-
   const [lesson, setLesson] = useState([]);
 
   useEffect(() => {
-    axios.get(baseURL).then((response) => {
+    api.get('lesson').then((response) => {
       setLesson(response.data);
     });
   }, []);
